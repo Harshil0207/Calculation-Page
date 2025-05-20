@@ -70,8 +70,8 @@
       const total = bfYesterday + cash + googlePay;
       const cashAndBFYesterday = bfYesterday + cash;
 
-      resultDisplay.textContent = `Total : BF Yesterday + Cash + Google Pay: ₹${total.toFixed(2)}\n` +
-        `\n BF Yesterday + Cash: ₹${cashAndBFYesterday.toFixed(2)}`;
+      resultDisplay.textContent = `Total : BF Yesterday + Cash + Google Pay: ₹${total.toFixed(2)}\n`
+       resultDisplay.textContent = `BF Yesterday + Cash: ₹${cashAndBFYesterday.toFixed(2)}\n`;
 
       // Show deposit input section and clear previous deposit
       depositSection.style.display = 'block';
