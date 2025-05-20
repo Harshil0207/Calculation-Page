@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Finance Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="theme-toggle" aria-label="Toggle theme">Switch to Dark Theme</button>
+<div class="container">
+  <div class="card" id="card">
+    <h1>Interactive 3D Finance Calculator</h1>
+    <form id="financeForm" autocomplete="off" novalidate>
+      <div>
+        <label for="bfYesterday">BF Yesterday</label><br />
+        <input type="number" id="bfYesterday" name="bfYesterday" min="0" step="any" required placeholder="Enter BF Yesterday" />
+      </div>
+      <div>
+        <label for="cash">Cash</label><br />
+        <input type="number" id="cash" name="cash" min="0" step="any" required placeholder="Enter Cash" />
+      </div>
+
+      <button type="button" id="btnSumBFYesterdayCash" disabled>Calculate BF Yesterday + Cash</button>
+
+      <div id="googlePaySection" style="display:none; margin-top:18px;">
+        <label for="googlePay">Google Pay</label><br />
+        <input type="number" id="googlePay" name="googlePay" min="0" step="any" placeholder="Enter Google Pay amount" />
+        <button type="button" id="btnSumAll" disabled style="margin-top: 12px;">Calculate BF Yesterday + Cash + Google Pay</button>
+      </div>
+
+      <div id="depositSection" style="display:none; margin-top:18px;">
+        <label for="deposit">Deposit</label><br />
+        <input type="number" id="deposit" name="deposit" min="0" step="any" placeholder="Enter Deposit amount" />
+        <div class="results" id="bfTomorrowResult" aria-live="polite"></div>
+      </div>
+    </form>
+    <div class="results" id="resultDisplay" aria-live="polite" style="margin-top: 20px;"></div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
